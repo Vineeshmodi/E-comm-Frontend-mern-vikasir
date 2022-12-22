@@ -1,0 +1,47 @@
+DAY -1  13/12/22 
+
+1)Folder Setup Inside src These Folders Actions,Component,Constants,Reduceds
+and a new file Store.js
+
+2)inside component Folder Layout Folder
+and a new file metadata for making title dynamic
+   <Helmet>
+    <title>{title}</title>
+    </Helmet>
+
+********************************************************************************************************************************
+DAY -2  15/12/22 
+1)// In store.js
+
+import { createStore, combineReducers, applyMiddleware } from "redux";
+import thunk from "redux-thunk";
+import { composeWithDevTools } from "redux-devtools-extension";
+import { render } from "react-dom";
+
+const Reducer = combineReducers({});
+
+let InitialState = {};
+
+const store = createStore(Reducer, InitialState);
+
+export default store;
+
+2)in index.js
+import { Provider } from 'react-redux';
+import store from './Store';
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+ <Provider store={store}>
+<App />
+</Provider>
+
+3)
+new file inside constants productconstant.js 
+
+new file Productreduced.js-->function switch case
+
+
+********************************************************************************************************************************
+
+DAY -3 17/12/2022
+
